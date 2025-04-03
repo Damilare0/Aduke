@@ -1,100 +1,40 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="6; url=next.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="6; url=next.html">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body{
-        /*background: url("images/house.jpg");*/
-        background: linear-gradient( rgba(0,0,0,0.7), blue), url("aduke1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        animation: glow 10s ease infinite;
-      }
-      @keyframes glow {
-        0%{
-        background: linear-gradient( rgba(0,0,0,0.7), #0F969C), url("aduke1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            15% { transform: scale(1.3); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.15); }
+            60% { transform: scale(1); }
         }
-        25%{
-        background: linear-gradient( rgba(0,0,0,0.7), #0C7076), url("aduke1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
+        .heartbeat {
+            animation: heartbeat 1.5s ease infinite;
         }
-        50%{
-        background: linear-gradient( rgba(0,0,0,0.7), #072E33), url("aduke1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
+        .love-gradient {
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #db2777 100%);
         }
-        75%{
-        background: linear-gradient( rgba(0,0,0,0.7), #05161A), url("aduke1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        }
-        100%{
-        background: linear-gradient( rgba(0,0,0,0.7), #0F969C), url("aduke1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        }
-      }
-      div{
-        position: relative;
-        padding: 10px 20px;
-        width: 20%;
-        margin: 300px 40%;
-        border: 2px dashed white;
-        border-radius: 50%;
-        animation: spin 6s linear infinite;
-      }
-      @keyframes spin{
-
-    0%{
-
-        transform: rotateY(0deg);
-    }
-    100%{
-        transform: rotateY(360deg);
-    }
-}
-      section{
-        position: relative;
-        width: 100%;
-        border-radius: 50%;
-        background: white;
-        height: 100%;
-        padding: 10px 20px;
-      }
-      p{
-        font-family: cursive;
-        font-size: 50px;
-      }
-      p span{
-        font-size: 40px;
-        font-weight: 800;
-      }
     </style>
-    <title>Aduke</title>
+    <title>For My Love</title>
 </head>
-<body>
-  <div>
-    <section>
-          <p>Hey <span>Aduke</span> </p>
-    </section>
-  </div>
+<body class="min-h-screen flex items-center justify-center love-gradient">
+    <div class="text-center space-y-6">
+        <div class="heartbeat">
+            <div class="border-4 border-rose-200 rounded-full p-8 shadow-xl backdrop-blur-sm bg-white/10">
+                <section class="bg-gradient-to-br from-rose-100 to-pink-50 rounded-full p-12">
+                    <p class="text-5xl font-cursive bg-gradient-to-r from-rose-600 to-pink-500 bg-clip-text text-transparent">
+                        Hey <span class="font-bold">Mī Herii</span> ❤️
+                    </p>
+                </section>
+            </div>
+        </div>
+        <p class="text-rose-100 text-lg animate-pulse">Click anywhere to continue this journey...</p>
+    </div>
 </body>
 </html>
