@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index.html 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +35,61 @@
             </div>
         </div>
         <p class="text-rose-100 text-lg animate-pulse">Click anywhere to continue this journey...</p>
+    </div>
+</body>
+</html>-->
+
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="6; url=next.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes gradient-pulse {
+            0% { background-color: #8B5CF6; }
+            50% { background-color: #7C3AED; }
+            100% { background-color: #6D28D9; }
+        }
+        
+        .love-gradient {
+            background: linear-gradient(45deg, #8B5CF6, #C084FC, #DB2777);
+            background-size: 200% 200%;
+            animation: gradient-flow 15s ease infinite;
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .heart-spin {
+            animation: spin 6s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(219, 39, 119, 0.5);
+        }
+    </style>
+    <title>Aduke</title>
+</head>
+<body class="love-gradient min-h-screen flex items-center justify-center">
+    <div class="heart-spin p-8 border-4 border-purple-300/50 rounded-full backdrop-blur-sm">
+        <section class="bg-white/10 p-12 rounded-full shadow-xl backdrop-blur-lg">
+            <p class="text-4xl md:text-5xl font-bold text-purple-100 text-glow">
+                Hey <span class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Aduke</span>
+            </p>
+        </section>
     </div>
 </body>
 </html>
